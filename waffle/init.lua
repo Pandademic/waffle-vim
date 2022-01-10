@@ -19,10 +19,10 @@ modes = {
 }
 
     -- end user defined settings and begin the actual WAFFLE
-opt.cursorline = waffle.settings.cursorline
-opt.tabstop =  waffle.settings.tabwidth
-opt.autoindent = waffle.settings.autoindent
-vim.wo.number = waffle.settings.numbers
+opt.cursorline = settings.cursorline
+opt.tabstop =  settings.tabwidth
+opt.autoindent = settings.autoindent
+vim.wo.number = settings.numbers
 if modes.default == true then
    require "paq" {
        "savq/paq-nvim";                  -- Let Paq manage itself

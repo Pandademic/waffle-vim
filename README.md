@@ -41,17 +41,3 @@ git clone https://github.com/Pandademic/waffle-vim.git C:\Users\bobbyjones\scoop
 see the waffle/init.lua ?
 There's asectiontheir which is your settings
 
-<!--  
-# Getting started
-----
-edit `init.lua` with the following addition:
-On the first uncommented line:
-``` lua
-local settings = require '^wafflesettings.settings'
-```
-See the ^ sign in the above ? At that mark put the full path to your nvim config
-like :
-``` lua
-local settings = require '~/.config/nvim/wafflesettings.settings'
-```
--->

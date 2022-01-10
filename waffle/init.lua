@@ -1,15 +1,33 @@
+-- SYRUP (your config) {
+-- options for vim 
+vo = {
+  tabwidth=4,
+  autoindent=true,
+  colorscheme="default",
+  cursorline=false,
+  numbers=false,
+}
+-- modes
+modes = {
+   default = true,
+   ide = nil,
+   tranquil = nil,
+}
+
+-- }
+
+-- HERE BEGINS ACTUAL WAFFLES
 local cmd = vim.cmd  -- to execute Vim commands e.g. cmd('pwd')
 local fn = vim.fn    -- to call Vim functions e.g. fn.bufnr()
 local g = vim.g      -- a table to access global variables
 local opt = vim.opt  -- to set options
 
-vo = require('config.vim-options')
 
--- load the user options {
-opt.cursorline = vo.vo.cursorline
-opt.tabstop =  vo.vo.tabwidth
-opt.autoindent = vo.vo.autoindent
-vim.wo.number = vo.vo.numbers
+-- load the user vim options {
+opt.cursorline = vo.cursorline
+opt.tabstop =  vo.tabwidth
+opt.autoindent = vo.autoindent
+vim.wo.number = vo.numbers
  
 
 --- }
@@ -27,12 +45,6 @@ imap <c-l> <esc> ddi
 imap <c-u> <esc> \Ui
 ]])
 -- }
-
-modes = {
-   default = true,
-   ide = nil,
-   tranquil = nil,
-}
 -- mode detction {
 if modes.default == true then
    require "paq" {

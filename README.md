@@ -16,11 +16,14 @@ May not be for begginers
 ---
 #### Windows
 -----
-1. setup a symlink between Appdata/local and .config/nvim . You can use roughly follow [this guide](https://www.maketecheasier.com/create-symbolic-links-windows10/#:~:text=Once%20LSE%20is%20installed%2C%20right,As%20%2D%3E%20Symbolic%20Link.%E2%80%9D)
+  **IN POWERSHELL from your home**
+1. setup a symlink between ~/AppData/Local and ~/.config/nvim . You can use roughly follow [this guide](https://www.maketecheasier.com/create-symbolic-links-windows10/#:~:text=Once%20LSE%20is%20installed%2C%20right,As%20%2D%3E%20Symbolic%20Link.%E2%80%9D)
 
-2. Once you've got that to work copy the contents of this repo to your .config/nvim directory - **DO NOT KEEP IT IN THE WAFFLE-VIM DIRECTORY**
+2. install [paq vim package manager](https://github.com/savq/paq-nvim)
 
-3. install [paq vim package manager](https://github.com/savq/paq-nvim)
+3. run ` mv $HOME/.config/nvim $HOME/.config/oldnvim ` to move your config to oldnvim
+
+4. run `git clone https://github.com/Pandademic/waffle-vim ~/.config/nvim` to clone the repo 
 
 ---
 <!--  

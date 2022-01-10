@@ -28,9 +28,14 @@ May not be for begginers
 
 5. cd to C:\Users\[YOU]\scoop\apps\neovim-nightly\current where [YOU] is your username
 
-6. git clone  this this repo to  C:\Users\[YOU]\scoop\apps\neovim-nightly\current\lua where [YOU] is your username
+6. git clone  this this repo to  C:\Users\[YOU]\scoop\apps\neovim-nightly\current\bin where [YOU] is your username as lua , like so (Example user : bobbyjones):
+```batch
 
+git clone https://github.com/Pandademic/waffle-vim.git C:\Users\bobbyjones\scoop\apps\neovim-nightly\current\bin\lua
+
+```
 ---
+
 <!--  
 # Getting started
 ----

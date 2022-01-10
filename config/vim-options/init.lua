@@ -1,6 +1,8 @@
 -- options for vim
-tabwidth=4
-autoindent=true
-colorscheme="default"
-cursorline=false
-numbers=false
+vo ={
+  tabwidth=4,
+  autoindent=true,
+  colorscheme="default",
+  cursorline=false,
+  numbers=false,
+}

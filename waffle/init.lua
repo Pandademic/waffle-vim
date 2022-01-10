@@ -6,10 +6,10 @@ local opt = vim.opt  -- to set options
 vo = require('config.vim-options')
 
 -- load the user options {
-opt.cursorline = vo.cursorline
-opt.tabstop =  vo.tabwidth
-opt.autoindent = vo.autoindent
-vim.wo.number = vo.numbers
+opt.cursorline = vo.vo.cursorline
+opt.tabstop =  vo.vo.tabwidth
+opt.autoindent = vo.vo.autoindent
+vim.wo.number = vo.vo.numbers
  
 
 --- }

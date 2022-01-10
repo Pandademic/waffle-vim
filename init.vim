@@ -50,3 +50,4 @@ set nocompatible
 " }
 lua require('wafflesettings.settings')
 lua require('wafflecore.plugins')
+lua require('wafflecore.options')

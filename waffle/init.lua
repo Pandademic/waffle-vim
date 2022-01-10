@@ -33,7 +33,4 @@ waffle = {
             "MunifTanjim/nui.nvim";
 
 
-      }
-}   
-    
-
+     }

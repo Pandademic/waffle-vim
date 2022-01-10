@@ -51,7 +51,5 @@ git clone https://github.com/Pandademic/waffle-vim.git C:\Users\bobbyjones\scoop
 ```
 ---
 # GETTING STARTED
-----
-see the waffle/init.lua ?
-There's asectiontheir which is your settings
-
+---
+go to the wiki

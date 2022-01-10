@@ -24,12 +24,12 @@ May not be for begginers
 
 3. move your config to oldnvim in .config <!-- not neccaacary but makes migration easier --> 
 
-4. run `git clone https://github.com/Pandademic/waffle-vim ~/.config/nvim` to clone the repo to uour nvim config location
+4. make a init.lua where it says `require('waffle')`
 
 5. cd to C:\Users\[YOU]\scoop\apps\neovim-nightly\current where [YOU] is your username
 
 6. git clone  this this repo to  C:\Users\[YOU]\scoop\apps\neovim-nightly\current\bin where [YOU] is your username as lua , like so (Example user : bobbyjones):
-```batch
+```sh
 
 git clone https://github.com/Pandademic/waffle-vim.git C:\Users\bobbyjones\scoop\apps\neovim-nightly\current\bin\lua
 

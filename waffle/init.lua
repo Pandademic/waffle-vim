@@ -42,7 +42,7 @@ set encoding=utf-8
 -- keymapping {
 cmd([[
 imap <c-l> <esc> ddi
-imap <c-u> <esc> \ U
+imap <c-u> <esc> \Ui
 ]])
 -- }
 

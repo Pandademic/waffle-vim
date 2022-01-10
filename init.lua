@@ -14,5 +14,8 @@
 -- ]]
 
 
-require('wafflesettings.settings')
-
+local settings = require 'wafflesettings.settings'
+if settings.StartMode == "default" then
+ require('modes.default.plugins')
+ require('modes.default.options')
+end

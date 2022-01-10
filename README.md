@@ -13,6 +13,7 @@ May not be for begginers
 2. install [paq vim package manager](https://github.com/savq/paq-nvim)
 3. run ` mv $HOME/.config/nvim $HOME/.config/oldnvim` to move your old config to oldnvim
 4. run `git clone https://github.com/Pandademic/waffle-vim ~/.config/nvim` to clone the repo
+5. make a init.lua which says `require('waffle')`
 ---
 #### Windows
 -----
@@ -35,6 +36,10 @@ git clone https://github.com/Pandademic/waffle-vim.git C:\Users\bobbyjones\scoop
 
 ```
 ---
+# GETTING STARTED
+----
+see the waffle/init.lua ?
+There's asectiontheir which is your settings
 
 <!--  
 # Getting started

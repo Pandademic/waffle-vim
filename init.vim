@@ -48,4 +48,5 @@ set nocompatible
     " }
 
 " }
+lua require('waffle-settings.settings')
 

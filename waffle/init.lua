@@ -3,31 +3,13 @@ local fn = vim.fn    -- to call Vim functions e.g. fn.bufnr()
 local g = vim.g      -- a table to access global variables
 local opt = vim.opt  -- to set options
 
--- these are user defined settings
-local settings = {
-   tabwidth=4,
-   autoindent=true,
-   colorscheme="default",
-   cursorline=false,
-   numbers=true,
-}
-local colorschemes = {
-   onedark = "joshdick/onedark",
-   seoul256 = "junegunn/seoul256.vim"
-}
--- say true to the mode you want
-local modes = {
-  default = true,
-  tranquil = false,
-  ide = false,
-}
--- end user defined settings and begin the actual WAFFLE
+local syrup = require('syrup')
 
 -- load the user options {
-opt.cursorline = settings.cursorline
-opt.tabstop =  settings.tabwidth
-opt.autoindent = settings.autoindent
-vim.wo.number = settings.numbers
+opt.cursorline = syrup.settings.cursorline
+opt.tabstop =  syrup.settings.tabwidth
+opt.autoindent = syrup.settings.autoindent
+vim.wo.number = syrup.settings.numbers
  
 
 --- }

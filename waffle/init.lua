@@ -28,7 +28,11 @@ imap <c-u> <esc> \Ui
 ]])
 -- }
 
-
+modes = {
+   default = true,
+   ide = nil,
+   tranquil = nil,
+}
 -- mode detction {
 if modes.default == true then
    require "paq" {

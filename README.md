@@ -11,6 +11,8 @@ May not be for begginers
 ----
 1. clone this repo to your neovim config location (Usually ~/.config/nvim/)
 2. install [paq vim package manager](https://github.com/savq/paq-nvim)
+3. run ` mv $HOME/.config/nvim $HOME/.config/oldnvim` to move your old config to oldnvim
+4. run `git clone https://github.com/Pandademic/waffle-vim ~/.config/nvim` to clone the repo
 ---
 #### Windows
 -----

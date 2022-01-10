@@ -1,4 +1,7 @@
 -- global settings
 vim.o.background = 'dark' -- background
 vim.g.mapleader = ‘,’ -- leader key
-StartupMode = "default"
+local waffle_settings = {
+  StartupMode = "default",
+}
+return waffle_settings

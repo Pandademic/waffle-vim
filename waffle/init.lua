@@ -23,7 +23,7 @@ opt.cursorline = waffle.settings.cursorline
 opt.tabstop =  waffle.settings.tabwidth
 opt.autoindent = waffle.settings.autoindent
 vim.wo.number = waffle.settings.numbers
-if modes.default == true {
+if modes.default == true then
    require "paq" {
        "savq/paq-nvim";                  -- Let Paq manage itself
 
@@ -31,4 +31,5 @@ if modes.default == true {
             
         "MunifTanjim/nui.nvim";
 
-}
+   }
+ end

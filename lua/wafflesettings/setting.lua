@@ -1,3 +1,3 @@
 vim.o.background = 'dark' -- background
-vim.g.mapleader = ‘.’ -- leader key
+vim.g.mapleader = ‘,’ -- leader key
 

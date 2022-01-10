@@ -13,7 +13,7 @@
 --
 -- 
 
-
+vim.opt.runtimepath=$HOME/.vim,$VIM/vimfiles,$VIMRUNTIME,$VIM/vimfiles/after,$HOME/.vim/after
 local settings = require 'wafflesettings.setting'
 if settings.StartMode == "default" then
  require('modes.default.plugins')

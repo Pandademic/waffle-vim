@@ -3,4 +3,4 @@ tabwidth=4
 autoindent=true
 colorscheme="default"
 cursorline=false
-numbers=true
+numbers=false

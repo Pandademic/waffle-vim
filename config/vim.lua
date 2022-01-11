@@ -1,6 +1,8 @@
--- your waffle's toppings A.K.A your config
--- TOPPINGS (your config) {
--- options for vim 
+-- options for vim  - these are directly loaded in waffle 
+
+-- DO NOT ADD YOUR OWN KEYS
+
+
 vo = {
   tabwidth=4,
   autoindent=true,
@@ -16,11 +18,4 @@ vo = {
   leaderKey=';',
   
 }
--- modes {
-modes = {
-   default = true,
-   ide = false,
-   tranquil = nil,
-}
-
--- }
+return vo

@@ -49,6 +49,29 @@ imap <c-u> <esc> \Ui
 cmd([[
   autocmd VimEnter PaqSync
 ]]) -- fix broken plugins  by removing old plugins and getting the new ones on waffle start up
+function ModeIde()
+     require "paq" {
+      "savq/paq-nvim"; -- let paq manage itself
+       
+          
+        "Konfekt/FastFold"; --speed up vim
+    
+        "antoinemadec/FixCursorHold.nvim"; -- fix
+    
+        "gelguy/wilder.nvim" -- completion menu
+       
+    
+    }
+    " Default keys
+    call wilder#setup({
+      \ 'modes': [':', '/', '?'],
+      \ 'next_key': '<Tab>',
+      \ 'previous_key': '<S-Tab>',
+      \ 'accept_key': '<Down>',
+      \ 'reject_key': '<Up>',
+      \ })
+ 
+end
 -- mode detction {
 if modes.default == true then
    require "paq" {
@@ -67,21 +90,6 @@ if modes.default == true then
    vim.api.nvim_set_keymap('n', ':', '<cmd>FineCmdline<CR>', {noremap = true})
  end
 if modes.ide == true then
-  require "paq" {
-      "savq/paq-nvim"; -- let paq manage itself
-       
-          
-        "Konfekt/FastFold"; --speed up vim
-    
-        "antoinemadec/FixCursorHold.nvim"; -- fix
-    
-        "sidebar-nvim/sidebar.nvim"; -- ide sidebar
-       
-    
-  }
-
-  cmd([[
-      map <c-t> command terminal
-   ]])
+      ModeIde()
   end
 -- }

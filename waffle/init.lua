@@ -1,6 +1,5 @@
-local config = require "config"  -- get config
-local vo = config.vo
-local modes = config.modes
+local vo = require "config.vim"  -- get config
+local modes = require "config.modes"
 -- HERE BEGINS ACTUAL WAFFLES
 local cmd = vim.cmd  -- to execute Vim commands e.g. cmd('pwd')
 local fn = vim.fn    -- to call Vim functions e.g. fn.bufnr()

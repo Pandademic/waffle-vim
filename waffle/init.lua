@@ -48,7 +48,6 @@ g.mapleader=vo.leaderkey
 -- basic vim stuff {
 opt.encoding='utf-8'
 opt.mouse='a'
-opt.notimeout=true
 --}
 
 -- keymapping {

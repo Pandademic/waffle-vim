@@ -1,5 +1,4 @@
-
-config = require 'config'  -- get config
+local config = require 'config'  -- get config
 local vo = config.vo
 local modes = config.modes
 -- HERE BEGINS ACTUAL WAFFLES

@@ -6,6 +6,14 @@ vo = {
   colorscheme="default",
   cursorline=false,
   numbers=false,
+  smartindent=true,
+  swapfile=false,
+  backup=false,
+  smartcase=true,
+  bells=false, -- error bells
+  syntax='on', -- on or off
+  leaderKey=';',
+  
 }
 -- modes
 modes = {
@@ -26,18 +34,21 @@ local opt = vim.opt  -- to set options
 -- load the user vim options {
 opt.cursorline = vo.cursorline
 opt.tabstop =  vo.tabwidth
-opt.autoindent = vo.autoindent
+bo.autoindent = vo.autoindent
 vim.wo.number = vo.numbers
- 
-
+bo.smartindent = vo.smartindent
+bo.swapfile = vo.swapfile
+o.backup = vo.backup
+o.syntax = vo.syntax
+o.errorbells = vo.bells
+o.smartcase = vo.smartcase
+g.mapleader=vo.leaderkey
 --- }
 
--- basic waffle stuff {
-cmd([[
-set notimeout
-set encoding=utf-8
-set mouse=a
-]])
+-- basic vim stuff {
+opt.encoding='utf-8'
+opt.mouse='a'
+opt.notimeout=true
 --}
 
 -- keymapping {
@@ -46,9 +57,6 @@ imap <c-l> <esc> ddi
 imap <c-u> <esc> \Ui
 ]])
 -- }
-cmd([[
-  autocmd VimEnter PaqSync
-]]) -- fix broken plugins  by removing old plugins and getting the new ones on waffle start up
 function ModeIde()
      require "paq" {
       "savq/paq-nvim"; -- let paq manage itself
@@ -59,19 +67,10 @@ function ModeIde()
         "antoinemadec/FixCursorHold.nvim"; -- fix
     
         "gelguy/wilder.nvim" -- completion menu
-       
-    
+           
+        
     }
-    cmd([[
-    " default keys
-    call wilder#setup({
-      \ 'modes': [':', '/', '?'],
-      \ 'next_key': '<Tab>',
-      \ 'previous_key': '<S-Tab>',
-      \ 'accept_key': '<Down>',
-      \ 'reject_key': '<Up>',
-      \ })
-    ]])
+    
  
 end
 -- mode detction {
@@ -95,3 +94,6 @@ if modes.ide == true then
       ModeIde()
   end
 -- }
+cmd([[
+  autocmd VimEnter PaqSync
+]]) -- fix broken plugins  by removing old plugins and getting the new ones on waffle start up

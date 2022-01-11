@@ -46,7 +46,9 @@ imap <c-l> <esc> ddi
 imap <c-u> <esc> \Ui
 ]])
 -- }
-autocmd VimEnter PaqSync -- fix broken plugins  by removing old plugins and getting the new ones on waffle start up
+cmd([[
+  autocmd VimEnter PaqSync
+]]) -- fix broken plugins  by removing old plugins and getting the new ones on waffle start up
 -- mode detction {
 if modes.default == true then
    require "paq" {

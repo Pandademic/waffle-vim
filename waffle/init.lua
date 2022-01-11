@@ -62,7 +62,8 @@ function ModeIde()
        
     
     }
-    " Default keys
+    cmd([[
+    " default keys
     call wilder#setup({
       \ 'modes': [':', '/', '?'],
       \ 'next_key': '<Tab>',
@@ -70,6 +71,7 @@ function ModeIde()
       \ 'accept_key': '<Down>',
       \ 'reject_key': '<Up>',
       \ })
+    ]])
  
 end
 -- mode detction {

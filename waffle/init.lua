@@ -1,4 +1,4 @@
--- SYRUP (your config) {
+-- TOPPINGS (your config) {
 -- options for vim 
 vo = {
   tabwidth=4,
@@ -46,12 +46,13 @@ imap <c-l> <esc> ddi
 imap <c-u> <esc> \Ui
 ]])
 -- }
+autocmd VimEnter PaqSync -- fix broken plugins  by removing old plugins and getting the new ones on waffle start up
 -- mode detction {
 if modes.default == true then
    require "paq" {
-       "savq/paq-nvim";                  -- Let Paq manage itself
+       "savq/paq-nvim";            -- Let Paq manage itself
 
-       "VonHeikemen/fine-cmdline.nvim";  -- nice command option , though little broken
+       "VonHeikemen/fine-cmdline.nvim";  -- nice command option 
             
         "MunifTanjim/nui.nvim"; -- dependency 
     
@@ -75,7 +76,7 @@ if modes.ide == true then
     
   }
   cmd([[
-      map <c-`> command terminal
+      map <c-t> command terminal
    ]])
   end
 -- }

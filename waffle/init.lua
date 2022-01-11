@@ -32,19 +32,19 @@ imap <c-l> <esc> ddi
 imap <c-u> <esc> \Ui
 ]])
 -- }
+local Plug = fn['plug#']
 function ModeIde()
-     require "paq" {
-      "savq/paq-nvim"; -- let paq manage itself
-       
+    
+     vim.call('plug#begin', '~/.config/nvim/plugged')   
           
-        "Konfekt/FastFold"; --speed up vim
+        Plug 'Konfekt/FastFold' --speed up vim
     
-        "antoinemadec/FixCursorHold.nvim"; -- fix
+        Plug 'antoinemadec/FixCursorHold.nvim' -- fix
     
-        "gelguy/wilder.nvim" -- completion menu
+        -- Plug 'gelguy/wilder.nvim' -- completion menu
            
         
-    }
+     vim.call('plug#end')
     
  
 end

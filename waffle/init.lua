@@ -36,12 +36,12 @@ opt.cursorline = vo.cursorline
 opt.tabstop =  vo.tabwidth
 bo.autoindent = vo.autoindent
 vim.wo.number = vo.numbers
-bo.smartindent = vo.smartindent
-bo.swapfile = vo.swapfile
-o.backup = vo.backup
-o.syntax = vo.syntax
-o.errorbells = vo.bells
-o.smartcase = vo.smartcase
+vim.bo.smartindent = vo.smartindent
+vim.bo.swapfile = vo.swapfile
+opt.backup = vo.backup
+opt.syntax = vo.syntax
+opt.errorbells = vo.bells
+opt.smartcase = vo.smartcase
 g.mapleader=vo.leaderkey
 --- }
 

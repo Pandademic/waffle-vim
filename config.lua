@@ -24,5 +24,3 @@ modes = {
 }
 
 -- }
-return vo
-return config

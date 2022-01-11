@@ -1,29 +1,4 @@
--- TOPPINGS (your config) {
--- options for vim 
-vo = {
-  tabwidth=4,
-  autoindent=true,
-  colorscheme="default",
-  cursorline=false,
-  numbers=false,
-  smartindent=true,
-  swapfile=false,
-  backup=false,
-  smartcase=true,
-  bells=false, -- error bells
-  syntax='on', -- on or off
-  leaderKey=';',
-  
-}
--- modes
-modes = {
-   default = true,
-   ide = false,
-   tranquil = nil,
-}
-
--- }
-
+require('config') -- get config
 -- HERE BEGINS ACTUAL WAFFLES
 local cmd = vim.cmd  -- to execute Vim commands e.g. cmd('pwd')
 local fn = vim.fn    -- to call Vim functions e.g. fn.bufnr()
@@ -32,17 +7,17 @@ local opt = vim.opt  -- to set options
 
 
 -- load the user vim options {
-opt.cursorline = vo.cursorline
-opt.tabstop =  vo.tabwidth
-vim.bo.autoindent = vo.autoindent
-vim.wo.number = vo.numbers
-vim.bo.smartindent = vo.smartindent
-vim.bo.swapfile = vo.swapfile
-opt.backup = vo.backup
-opt.syntax = vo.syntax
-opt.errorbells = vo.bells
-opt.smartcase = vo.smartcase
-g.mapleader=vo.leaderkey
+opt.cursorline = config.vo.cursorline
+opt.tabstop =  config.vo.tabwidth
+vim.bo.autoindent = config.vo.autoindent
+vim.wo.number = config.vo.numbers
+vim.bo.smartindent = config.vo.smartindent
+vim.bo.swapfile = config.vo.swapfile
+opt.backup = config.vo.backup
+opt.syntax = config.vo.syntax
+opt.errorbells = config.vo.bells
+opt.smartcase = config.vo.smartcase
+g.mapleader=config.vo.leaderkey
 --- }
 
 -- basic vim stuff {
@@ -73,7 +48,7 @@ function ModeIde()
  
 end
 -- mode detction {
-if modes.default == true then
+if config.modes.default == true then
    require "paq" {
        "savq/paq-nvim";            -- Let Paq manage itself
 
@@ -89,7 +64,7 @@ if modes.default == true then
    }
    vim.api.nvim_set_keymap('n', ':', '<cmd>FineCmdline<CR>', {noremap = true})
  end
-if modes.ide == true then
+if config.modes.ide == true then
       ModeIde()
   end
 -- }

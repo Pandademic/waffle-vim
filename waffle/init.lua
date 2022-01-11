@@ -34,7 +34,7 @@ local opt = vim.opt  -- to set options
 -- load the user vim options {
 opt.cursorline = vo.cursorline
 opt.tabstop =  vo.tabwidth
-bo.autoindent = vo.autoindent
+vim.bo.autoindent = vo.autoindent
 vim.wo.number = vo.numbers
 vim.bo.smartindent = vo.smartindent
 vim.bo.swapfile = vo.swapfile

@@ -55,7 +55,7 @@ function ModeIde()
         
         set background=dark
        
-       colorscheme solarized 
+       colorscheme solarized
      ]])
  
 end

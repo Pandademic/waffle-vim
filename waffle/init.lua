@@ -46,7 +46,7 @@ function ModeIde()
     
         --{"gelguy/wilder.nvim",fn["wilder#setup({'modes': [':', '/', '?']})"]}; -- completion menu
         
-        "projekt0n/github-nvim-theme"
+        "projekt0n/github-nvim-theme";
            
         
      }

@@ -43,10 +43,20 @@ function ModeIde()
         "antoinemadec/FixCursorHold.nvim"; -- fix
     
         {"gelguy/wilder.nvim",fn["wilder#setup({'modes': [':', '/', '?']})"]}; -- completion menu
+        
+        "altercation/vim-colors-solarized"
            
         
      }
-    
+     cmd([[
+        syntax on
+        
+        let g:solarized_termcolors=256
+        
+        set background=dark
+       
+       colorscheme solarized 
+     ]])
  
 end
 -- mode detction {

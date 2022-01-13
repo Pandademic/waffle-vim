@@ -1,6 +1,4 @@
-vim.cmd([[
-  autocmd VimEnter PaqSync
-]]) -- fix broken plugins  by removing old plugins and getting the new ones on waffle start up
+vim.cmd([[PaqSync]]) -- fix broken plugins  by removing old plugins and getting the new ones on waffle start up
 
 local vo = require "config.vim"  -- get config
 local modes = require "config.modes"

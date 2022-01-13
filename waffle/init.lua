@@ -44,18 +44,12 @@ function ModeIde()
     
         {"gelguy/wilder.nvim",fn["wilder#setup({'modes': [':', '/', '?']})"]}; -- completion menu
         
-        "altercation/vim-colors-solarized"
+        "sonph/onehalf"
            
         
      }
      cmd([[
-        syntax on
-        
-        let g:solarized_termcolors=256
-        
-        set background=dark
-       
-       colorscheme solarized
+       colorscheme onehalfdark
      ]])
  
 end

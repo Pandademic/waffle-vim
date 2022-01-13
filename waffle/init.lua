@@ -1,4 +1,6 @@
-vim.cmd([[PaqSync]]) -- fix broken plugins  by removing old plugins and getting the new ones on waffle start up
+vim.cmd([[
+  PackerSync
+  ]]) -- fix broken plugins  by removing old plugins and getting the new ones on waffle start up
 
 local vo = require "config.vim"  -- get config
 local modes = require "config.modes"
@@ -35,31 +37,7 @@ imap <c-u> <esc> \Ui
 ]])
 -- }
 function ModeIde()
-    
-     require "paq"{ 
-        
-        "savq/paq-nvim";            -- Let Paq manage itself
-          
-        "Konfekt/FastFold"; --speed up vim
-    
-        "antoinemadec/FixCursorHold.nvim"; -- fix
-    
-        --{"gelguy/wilder.nvim",fn["wilder#setup({'modes': [':', '/', '?']})"]}; -- completion menu
-        
-        "projekt0n/github-nvim-theme";
-           
-        
-     }
-      -- Example config in Lua
-    require("github-theme").setup({
-    theme_style = "dark",
-    function_style = "italic",
-    sidebars = {"qf", "vista_kind", "terminal", "packer"},
-
-    -- Change the "hint" color to the "orange" color, and make the "error" color bright red
-    colors = {hint = "orange", error = "#ff0000"},
-    })
- 
+  require 'modes.ide'
 end
 -- mode detction {
 if modes.default == true then

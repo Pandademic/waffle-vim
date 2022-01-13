@@ -44,13 +44,19 @@ function ModeIde()
     
         --{"gelguy/wilder.nvim",fn["wilder#setup({'modes': [':', '/', '?']})"]}; -- completion menu
         
-        "sonph/onehalf"
+        "projekt0n/github-nvim-theme"
            
         
      }
-     cmd([[
-       colorscheme onehalfdark
-     ]])
+      -- Example config in Lua
+    require("github-theme").setup({
+    theme_style = "dark",
+    function_style = "italic",
+    sidebars = {"qf", "vista_kind", "terminal", "packer"},
+
+    -- Change the "hint" color to the "orange" color, and make the "error" color bright red
+    colors = {hint = "orange", error = "#ff0000"},
+    })
  
 end
 -- mode detction {

@@ -32,19 +32,20 @@ imap <c-l> <esc> ddi
 imap <c-u> <esc> \Ui
 ]])
 -- }
-local Plug = fn['plug#']
 function ModeIde()
     
-     vim.call('plug#begin', '~/.config/nvim/plugged')   
+     require "paq"{ 
+        
+        "savq/paq-nvim";            -- Let Paq manage itself
           
-        Plug 'Konfekt/FastFold' --speed up vim
+        "Konfekt/FastFold"; --speed up vim
     
-        Plug 'antoinemadec/FixCursorHold.nvim' -- fix
+        "antoinemadec/FixCursorHold.nvim"; -- fix
     
-        -- Plug 'gelguy/wilder.nvim' -- completion menu
+        {"gelguy/wilder.nvim",fn["wilder#setup({'modes': [':', '/', '?']})"]}; -- completion menu
            
         
-     vim.call('plug#end')
+     }
     
  
 end
@@ -64,6 +65,7 @@ if modes.default == true then
 
    }
    vim.api.nvim_set_keymap('n', ':', '<cmd>FineCmdline<CR>', {noremap = true})
+   vim.api.nvim_set_keymap('n', '<C-x><C-z>', '<NOP>', {noremap = true})
  end
 if modes.ide == true then
       ModeIde()

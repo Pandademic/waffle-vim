@@ -42,7 +42,7 @@ function ModeIde()
     
         "antoinemadec/FixCursorHold.nvim"; -- fix
     
-        {"gelguy/wilder.nvim",fn["wilder#setup({'modes': [':', '/', '?']})"]}; -- completion menu
+        --{"gelguy/wilder.nvim",fn["wilder#setup({'modes': [':', '/', '?']})"]}; -- completion menu
         
         "sonph/onehalf"
            

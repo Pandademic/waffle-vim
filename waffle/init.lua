@@ -1,21 +1,7 @@
 local modes = require "config.modes"
 -- mode detction {
 if modes.default == true then
-   require "paq" {
-       "savq/paq-nvim";            -- Let Paq manage itself
-
-       "VonHeikemen/fine-cmdline.nvim";  -- nice command option 
-            
-        "MunifTanjim/nui.nvim"; -- dependency 
-    
-        "Konfekt/FastFold"; --speed up vim
-    
-        "antoinemadec/FixCursorHold.nvim"; -- fix
-    
-
-   }
-   vim.api.nvim_set_keymap('n', ':', '<cmd>FineCmdline<CR>', {noremap = true})
-   vim.api.nvim_set_keymap('n', '<C-x><C-z>', '<NOP>', {noremap = true})
+    echo 'hello'
  end
 if modes.ide == true then
       require 'modes.ide'

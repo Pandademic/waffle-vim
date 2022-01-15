@@ -1,3 +1,4 @@
+local modes = require "config.modes"
 -- mode detction {
 if modes.default == true then
    require "paq" {
@@ -21,8 +22,6 @@ if modes.ide == true then
   end
 -- }
 local vo = require "config.vim"  -- get config
-local modes = require "config.modes"
--- HERE BEGINS ACTUAL WAFFLES
 local cmd = vim.cmd  -- to execute Vim commands e.g. cmd('pwd')
 local fn = vim.fn    -- to call Vim functions e.g. fn.bufnr()
 local g = vim.g      -- a table to access global variables

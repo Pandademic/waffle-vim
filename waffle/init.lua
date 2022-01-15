@@ -1,7 +1,25 @@
-vim.cmd([[
-  PackerSync
-  ]]) -- fix broken plugins  by removing old plugins and getting the new ones on waffle start up
+-- mode detction {
+if modes.default == true then
+   require "paq" {
+       "savq/paq-nvim";            -- Let Paq manage itself
 
+       "VonHeikemen/fine-cmdline.nvim";  -- nice command option 
+            
+        "MunifTanjim/nui.nvim"; -- dependency 
+    
+        "Konfekt/FastFold"; --speed up vim
+    
+        "antoinemadec/FixCursorHold.nvim"; -- fix
+    
+
+   }
+   vim.api.nvim_set_keymap('n', ':', '<cmd>FineCmdline<CR>', {noremap = true})
+   vim.api.nvim_set_keymap('n', '<C-x><C-z>', '<NOP>', {noremap = true})
+ end
+if modes.ide == true then
+      require 'modes.ide'
+  end
+-- }
 local vo = require "config.vim"  -- get config
 local modes = require "config.modes"
 -- HERE BEGINS ACTUAL WAFFLES
@@ -35,29 +53,4 @@ cmd([[
 imap <c-l> <esc> ddi
 imap <c-u> <esc> \Ui
 ]])
--- }
-function ModeIde()
-  require 'modes.ide'
-end
--- mode detction {
-if modes.default == true then
-   require "paq" {
-       "savq/paq-nvim";            -- Let Paq manage itself
-
-       "VonHeikemen/fine-cmdline.nvim";  -- nice command option 
-            
-        "MunifTanjim/nui.nvim"; -- dependency 
-    
-        "Konfekt/FastFold"; --speed up vim
-    
-        "antoinemadec/FixCursorHold.nvim"; -- fix
-    
-
-   }
-   vim.api.nvim_set_keymap('n', ':', '<cmd>FineCmdline<CR>', {noremap = true})
-   vim.api.nvim_set_keymap('n', '<C-x><C-z>', '<NOP>', {noremap = true})
- end
-if modes.ide == true then
-      ModeIde()
-  end
 -- }

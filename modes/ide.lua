@@ -48,7 +48,7 @@ function configurePlugins()
 function init()
     installPlugins()
     vim.cmd [[packadd packer.nvim]]
-    vimd.cmd [[ PackerSync ]]
+    vim.cmd [[ PackerSync ]]
     configurePlugins()
 end
 init()

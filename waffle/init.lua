@@ -1,7 +1,7 @@
 local modes = require "config.modes"
 -- mode detction {
 if modes.default == true then
-    print('hello')
+    require 'modes.default'
  end
 if modes.ide == true then
       require 'modes.ide'

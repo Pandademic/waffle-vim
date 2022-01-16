@@ -26,8 +26,8 @@ May not be for begginers
 1. clone this repo to your neovim config location (Usually ~/.config/nvim/)
 2. install packer.nvim
 3. run ` mv $HOME/.config/nvim $HOME/.config/oldnvim` to move your old config to oldnvim
-4. run `git clone https://github.com/Pandademic/waffle-vim ~/.config/nvim` to clone the repo
-5. make a init.lua which says `require('waffle')`
+4. run `git clone https://github.com/Pandademic/waffle-vim ~/.config/nvim/lua` to clone the repo
+5. make a init.vim which says `lua require('waffle')`
 6. get  a nerd font / patched font 
 7. get started
 ---
@@ -45,7 +45,7 @@ May not be for begginers
 
 5. cd to C:\Users\[YOU]\scoop\apps\neovim-nightly\current where [YOU] is your username
 
-6. git clone  this this repo to  C:\Users\[YOU]\scoop\apps\neovim-nightly\current\bin where [YOU] is your username as lua , like so (Example user : bobbyjones):
+6. git clone  this this repo to  C:\Users\[YOU]\scoop\apps\neovim-nightly\current\bin\lua where [YOU] is your username as lua , like so (Example user : bobbyjones):
 ```sh
 
 git clone https://github.com/Pandademic/waffle-vim.git C:\Users\bobbyjones\scoop\apps\neovim-nightly\current\bin\lua

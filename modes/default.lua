@@ -7,6 +7,9 @@ function installPlugins()
         use 'antoinemadec/FixCursorHold.nvim' -- generic dependencie
 
         use 'Konfekt/FastFold' --  speed up vim
+            
+        use 'tpope/vim-fugitive' -- git wrapping
+            
       end)
         
 end

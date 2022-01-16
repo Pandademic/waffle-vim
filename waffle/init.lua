@@ -15,16 +15,16 @@ local opt = vim.opt  -- to set options
 
 
 -- load the user vim options {
-opt.cursorline = vo.cursorline
-opt.tabstop =  vo.tabwidth
+vim.opt.cursorline = vo.cursorline
+vim.opt.tabstop =  vo.tabwidth
 vim.bo.autoindent = vo.autoindent
 vim.wo.number = vo.numbers
 vim.bo.smartindent = vo.smartindent
 vim.bo.swapfile = vo.swapfile
-opt.backup = vo.backup
-opt.syntax = vo.syntax
-opt.errorbells = vo.bells
-opt.smartcase = vo.smartcase
+vim.opt.backup = vo.backup
+vim.opt.syntax = vo.syntax
+vim.opt.errorbells = vo.bells
+vim.opt.smartcase = vo.smartcase
 g.mapleader = vo.leaderkey
 --- }
 

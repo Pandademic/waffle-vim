@@ -23,13 +23,22 @@ function installPlugins()
           }
         use {
 	        "SmiteshP/nvim-gps",
-	        requires = "nvim-treesitter/nvim-treesitter"
+	        requires = "nvim-treesitter/nvim-treesitter" -- FIXME: I'M BROKEN
         }
-	use {"akinsho/toggleterm.nvim"}
+	use {"akinsho/toggleterm.nvim"} -- terminal
 			
-	use 'alvan/vim-closetag'
+	use 'alvan/vim-closetag' -- close tags
 			
-	use 'folke/lsp-colors.nvim'
+	use 'folke/lsp-colors.nvim' -- lsp grouping
+	use {
+  		"folke/todo-comments.nvim",
+  		requires = "nvim-lua/plenary.nvim",
+  		config = function()
+    		require("todo-comments").setup {
+    		}
+  		end
+	}		
+			
       end)
         
 end

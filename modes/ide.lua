@@ -28,6 +28,8 @@ function installPlugins()
 	use {"akinsho/toggleterm.nvim"}
 			
 	use 'alvan/vim-closetag'
+			
+	use 'folke/lsp-colors.nvim'
       end)
         
 end

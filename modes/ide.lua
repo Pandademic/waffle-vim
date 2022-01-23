@@ -61,7 +61,7 @@ function configurePlugins()
         tabline = {},
         extensions = {}
       }
-      toggleterm.setup {
+      require('toggleterm').setup {
   	size = 13,
   	open_mapping = [[<c-\>]],
   	shade_filetypes = {},

@@ -21,6 +21,10 @@ function installPlugins()
             'nvim-lualine/lualine.nvim',
             requires = { 'kyazdani42/nvim-web-devicons', opt = true }
           }
+        use {
+	        "SmiteshP/nvim-gps",
+	        requires = "nvim-treesitter/nvim-treesitter"
+        }
       end)
         
 end

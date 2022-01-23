@@ -1,3 +1,4 @@
+require('packer')
 function installPlugins()
     -- Have packer use a popup window
     packer.init({

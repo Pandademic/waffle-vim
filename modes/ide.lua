@@ -37,7 +37,16 @@ function installPlugins()
     		require("todo-comments").setup {
     		}
   		end
-	}		
+	}
+	-- Lua
+	use {
+  		"folke/which-key.nvim",
+  		config = function()
+    		require("which-key").setup {
+
+    		}
+  		end
+	}	
 			
       end)
         

@@ -2,10 +2,13 @@ local modes = require "config.modes"
 -- mode detction {
 if modes.default == true then
     require 'modes.default'
- end
+end
 if modes.ide == true then
       require 'modes.ide'
-  end
+end
+if modes.tranquil == true then
+      require 'modes.tranquil'
+end
 -- }
 local vo = require "config.vim"  -- get config
 local cmd = vim.cmd  -- to execute Vim commands e.g. cmd('pwd')

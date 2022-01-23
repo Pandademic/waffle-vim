@@ -29,6 +29,8 @@ function installPlugins()
         
 end
 function configurePlugins()
+    require("nvim-gps").setup()
+    local gps 	= require('nvim-gps')
     require('lualine').setup {
         options = {
           icons_enabled = true,
@@ -42,6 +44,9 @@ function configurePlugins()
           lualine_a = {'mode'},
           lualine_b = {'branch', 'diff', 'diagnostics'},
           lualine_c = {'filename'},
+	  lualine_d = {
+		{ gps.get_location, cond = gps.is_available },
+		}
           lualine_x = {'encoding', 'fileformat', 'filetype'},
           lualine_y = {'progress'},
           lualine_z = {'location'}

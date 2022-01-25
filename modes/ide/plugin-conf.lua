@@ -39,3 +39,4 @@ function configure()
 		direction = 'horizontal'
      }
   end
+configure()

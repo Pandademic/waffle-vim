@@ -39,7 +39,7 @@ function init()
     installPlugins()
     vim.cmd [[packadd packer.nvim]]
     vim.cmd [[ PackerSync ]]
-    vim.cmd[[autocmd BufNewFile * :Goyo]]
+    vim.cmd[[autocmd  BufWinEnter  * :Goyo]]
 end
 init()
 vim.cmd[[

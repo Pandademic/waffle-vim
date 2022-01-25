@@ -43,6 +43,6 @@ function init()
 	
 	]]	
     installPlugins()
-    require('modes.ide.plugin-conf').configure()	
+    require('modes.ide.plugin-conf')	
 end
 init()

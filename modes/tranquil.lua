@@ -42,3 +42,6 @@ function init()
     vim.cmd[[autocmd BufNewFile * :Goyo]]
 end
 init()
+vim.cmd[[
+autocmd! User GoyoLeave x
+]]

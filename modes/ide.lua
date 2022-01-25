@@ -12,7 +12,9 @@ function installPlugins()
     return require('packer').startup(function()
         -- Packer can manage itself
         use 'wbthomason/packer.nvim'
-      
+     
+	use 'lewis6991/impatient.nvim'
+			
         use 'antoinemadec/FixCursorHold.nvim' -- generic dependencie
 
         use 'Konfekt/FastFold' --  speed up vim
@@ -27,9 +29,6 @@ function installPlugins()
         }
 	use {"akinsho/toggleterm.nvim"} -- terminal
 			
-	use 'alvan/vim-closetag' -- close tags
-			
-	use 'folke/lsp-colors.nvim' -- lsp grouping
 	use {
   		"folke/todo-comments.nvim",
   		requires = "nvim-lua/plenary.nvim",
@@ -38,7 +37,10 @@ function installPlugins()
     		}
   		end
 	}
-			
+	  config = {
+    	-- Move to lua dir so impatient.nvim can cache it
+    	compile_path = vim.fn.stdpath('config')..'/lua/packer_compiled.lua'
+  }		
       end)
         
 end

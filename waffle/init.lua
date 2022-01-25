@@ -34,11 +34,13 @@ g.mapleader = vo.leaderkey
 -- basic vim stuff {
 opt.encoding='utf-8'
 opt.mouse='a'
+vim.cmd[[
+set wildignore+=*/node_modules/*
+]]
 --}
 
 -- keymapping {
 cmd([[
-imap <c-l> <esc> ddi
-imap <c-u> <esc> \Ui
+imap <d-l> <esc> ddi
 ]])
 -- }

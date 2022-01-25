@@ -38,8 +38,10 @@ function installPlugins()
         
 end
 function init()
-    vim.cmd [[ PackerSync ]]
-    vim.cmd [[packadd packer.nvim]]	
+    vim.cmd [[
+	packadd packer.nvim
+	
+	]]	
     installPlugins()
     require('modes.ide.plugin-conf').configure()	
 end

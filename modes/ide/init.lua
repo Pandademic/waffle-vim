@@ -40,7 +40,7 @@ end
 function init()
     vim.cmd [[
 	packadd packer.nvim
-	PackeySync
+	PackerSync
 	]]	
     installPlugins()
     require('modes.ide.plugin-conf')	

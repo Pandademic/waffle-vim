@@ -1,0 +1,9 @@
+{
+    "files.exclude": {
+        "**/node_modules": true
+    },
+    "workbench.preferredDarkColorTheme": "Monokai One Dark Vivid",
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.preferredLightColorTheme": "Solarized Light",
+    "workbench.tips.enabled": false
+}

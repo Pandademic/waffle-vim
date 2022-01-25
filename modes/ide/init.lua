@@ -1,5 +1,3 @@
-vim.cmd [[packadd packer.nvim]]
-vim.cmd [[ PackerSync ]]
 function installPlugins()
     -- Have packer use a popup window
     require('packer').init({
@@ -40,6 +38,8 @@ function installPlugins()
         
 end
 function init()
+    vim.cmd [[packadd packer.nvim]]
+    vim.cmd [[ PackerSync ]]	
     installPlugins()
     require('modes.ide.plugin-conf').configure()	
 end

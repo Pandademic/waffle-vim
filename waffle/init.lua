@@ -26,15 +26,15 @@ vim.g.mapleader = vo.leaderkey
 --- }
 
 -- basic vim stuff {
-opt.encoding='utf-8'
-opt.mouse='a'
+vim.opt.encoding='utf-8'
+vim.opt.mouse='a'
 vim.cmd[[
 set wildignore+=*/node_modules/*
 ]]
 --}
 
 -- keymapping {
-cmd([[
+vim.cmd([[
 imap <dl> <esc> ddi
 ]])
 -- }

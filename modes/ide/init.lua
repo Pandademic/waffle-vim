@@ -30,6 +30,8 @@ function installPlugins()
     		}
   		end
 	}
+	-- using packer.nvim
+	use {'akinsho/bufferline.nvim', requires = 'kyazdani42/nvim-web-devicons'} --add  tabs
 	  config = {
     	-- Move to lua dir so impatient.nvim can cache it
     	compile_path = vim.fn.stdpath('config')..'/lua/packer_compiled.lua'
@@ -76,6 +78,8 @@ function configure()
 		persist_size = true,
 		direction = 'horizontal'
      }
+     vim.opt.termguicolors = true
+     require("bufferline").setup{}
     end
 function init()
     vim.cmd [[packadd packer.nvim]]

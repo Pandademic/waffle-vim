@@ -28,7 +28,7 @@ vim.opt.backup = vo.backup
 vim.opt.syntax = vo.syntax
 vim.opt.errorbells = vo.bells
 vim.opt.smartcase = vo.smartcase
-g.mapleader = vo.leaderkey
+vim.g.mapleader = vo.leaderkey
 --- }
 
 -- basic vim stuff {

@@ -11,12 +11,6 @@ if modes.tranquil == true then
 end
 -- }
 local vo = require "config.vim"  -- get config
-local cmd = vim.cmd  -- to execute Vim commands e.g. cmd('pwd')
-local fn = vim.fn    -- to call Vim functions e.g. fn.bufnr()
-local g = vim.g      -- a table to access global variables
-local opt = vim.opt  -- to set options
-
-
 -- load the user vim options {
 vim.opt.cursorline = vo.cursorline
 vim.opt.tabstop =  vo.tabwidth
@@ -28,7 +22,7 @@ vim.opt.backup = vo.backup
 vim.opt.syntax = vo.syntax
 vim.opt.errorbells = vo.bells
 vim.opt.smartcase = vo.smartcase
-g.mapleader = vo.leaderkey
+vim.g.mapleader = vo.leaderkey
 --- }
 
 -- basic vim stuff {
@@ -41,6 +35,6 @@ set wildignore+=*/node_modules/*
 
 -- keymapping {
 cmd([[
-imap <d-l> <esc> ddi
+imap <dl> <esc> ddi
 ]])
 -- }

@@ -28,6 +28,10 @@ function installPlugins()
                       require'alpha'.setup(require'alpha.themes.dashboard'.config)
                 end
         }
+        use {
+             'nvim-telescope/telescope.nvim',
+                requires = { {'nvim-lua/plenary.nvim'} }
+        }
                     
           config = {
         -- Move to lua dir so impatient.nvim can cache it
@@ -58,13 +62,11 @@ function configure()
 
         dashboard.section.buttons.val = {
                 dashboard.button("p", "  Find project", ":Telescope projects <CR>"),
-                dashboard.button("n", "  New file", ":enew && ene <BAR> startinsert <CR>"),
+                dashboard.button("n", "  New file", ":ene <BAR> startinsert <CR>"),
                 dashboard.button("f", "  Find file", ":Telescope find_files <CR>"),
                 dashboard.button("t", "  Find text", ":Telescope live_grep <CR>"),
                 dashboard.button("m", "  BookMarks", ":Telescope marks <CR>"),
-          dashboard.button("e", "  Extensions ", ":e ~/.config/nvim/lua/VisualStudioNeovim/Core/plugins.lua<CR>"),
                 dashboard.button("r", "  Recently used files", ":Telescope oldfiles <CR>"),
-                dashboard.button("c", "  Configuration", ":e ~/.config/nvim/lua/VisualStudioNeovim/Core/options.lua<CR>"),
                 dashboard.button("q", "  Quit Neovim", ":qa<CR>"),
         }
 
@@ -80,7 +82,6 @@ function configure()
         dashboard.section.buttons.opts.hl = "Keyword"
 
         dashboard.opts.opts.noautocmd = true
-        -- vim.cmd([[autocmd User AlphaReady echo 'ready']])
         alpha.setup(dashboard.opts)
 
 end

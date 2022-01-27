@@ -37,6 +37,7 @@ function installPlugins()
         
 end
 function configure()
+        local alpha = require("alpha")
         local dashboard = require("alpha.themes.dashboard")
         dashboard.section.header.val = {
           '',

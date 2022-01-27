@@ -61,21 +61,13 @@ function configure()
                 }
 
         dashboard.section.buttons.val = {
-                dashboard.button("p", "  Find project", ":Telescope projects <CR>"),
                 dashboard.button("n", "  New file", ":ene <BAR> startinsert <CR>"),
-                dashboard.button("f", "  Find file", ":Telescope find_files <CR>"),
                 dashboard.button("t", "  Find text", ":Telescope live_grep <CR>"),
-                dashboard.button("m", "  BookMarks", ":Telescope marks <CR>"),
+                dashboard.button("m", "  Bookmarks", ":Telescope marks <CR>"),
                 dashboard.button("r", "  Recently used files", ":Telescope oldfiles <CR>"),
-                dashboard.button("q", "  Quit Neovim", ":qa<CR>"),
+                dashboard.button("q", "  Quit Neovim", ":q!<CR>"),
         }
 
-
-        dashboard.section.footer.val = {
-          "",
-          "--   DOOM WAFFLE",
-          "",
-        }
 
         dashboard.section.footer.opts.hl = "Type"
         dashboard.section.header.opts.hl = "Include"

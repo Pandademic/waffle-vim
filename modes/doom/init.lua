@@ -20,6 +20,14 @@ function installPlugins()
         use 'tpope/vim-fugitive' -- git wrapping
         
          use 'lewis6991/impatient.nvim'
+                   
+         use {
+                'goolord/alpha-nvim',
+                requires = { 'kyazdani42/nvim-web-devicons' },
+                config = function ()
+                        require'alpha'.setup(require'alpha.themes.startify'.config)
+                end
+        }
                     
           config = {
         -- Move to lua dir so impatient.nvim can cache it

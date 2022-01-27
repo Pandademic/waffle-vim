@@ -9,6 +9,9 @@ end
 if modes.tranquil == true then
       require 'modes.tranquil'
 end
+if modes.doom == true then
+		require 'modes.doom'
+end
 -- }
 local vo = require "config.vim"  -- get config
 -- load the user vim options {

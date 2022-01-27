@@ -1,12 +1,11 @@
--- options for vim  - these are directly loaded in waffle 
+-- options for vim  - these are directly loaded into waffle 
 
--- DO NOT ADD YOUR OWN KEYS
+-- DO NOT ADD YOUR OWN KEYS TO THIS TABLE
 
 
 vo = {
   tabwidth=4,
   autoindent=true,
-  colorscheme="default",
   cursorline=false,
   numbers=false,
   smartindent=true,
@@ -15,7 +14,7 @@ vo = {
   smartcase=true,
   bells=false, -- error bells
   syntax='on', -- on or off
-  leaderKey=';',
+  leaderKey='<alt>',
   
 }
 return vo

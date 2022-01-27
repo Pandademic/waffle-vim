@@ -1,7 +1,8 @@
-function init()
-		vim.cmd [[packadd packer.nvim]]
+vim.cmd [[packadd packer.nvim]]
+vim.cmd [[ PackerSync ]]
+unction init()
 		require 'modes.doom.plugins'
-		vim.cmd [[ PackerSync ]]
+
 		require 'modes.doom.configp'
 end
 init()

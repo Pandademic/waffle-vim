@@ -58,7 +58,7 @@ function configure()
 
         dashboard.section.buttons.val = {
                 dashboard.button("p", "  Find project", ":Telescope projects <CR>"),
-                dashboard.button("n", "  New file", ":ene <BAR> startinsert <CR>"),
+                dashboard.button("n", "  New file", ":enew && ene <BAR> startinsert <CR>"),
                 dashboard.button("f", "  Find file", ":Telescope find_files <CR>"),
                 dashboard.button("t", "  Find text", ":Telescope live_grep <CR>"),
                 dashboard.button("m", "  BookMarks", ":Telescope marks <CR>"),

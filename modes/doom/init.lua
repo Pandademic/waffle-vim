@@ -77,10 +77,20 @@ function configure()
         alpha.setup(dashboard.opts)
 
 end
+function setupVim()
+     vim.cmd[[
+        set nocursorline
+        set nocursorcolumn
+        set scrolljump=5
+        set lazyredraw
+        set synmaxcol=180
+        ]]
+ end
 function init()
     installPlugins()
     vim.cmd [[packadd packer.nvim]]
     vim.cmd [[ PackerSync ]]
+    setupVim()
     configure()
 end
 init()

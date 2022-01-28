@@ -1,20 +1,21 @@
-local modes = require "config.modes"
--- mode detction {
-if modes.default == true then
-    require 'modes.default'
-end
-if modes.ide == true then
-      require 'modes.ide'
-end
-if modes.tranquil == true then
-      require 'modes.tranquil'
-end
-if modes.doom == true then
-		require 'modes.doom'
-end
--- }
+local mode = require "config.modes"
+-- common stuff
 require 'waffle.core.loadVimOptions'
 
 require 'waffle.core.vimStuff'
 
 require 'waffle.core.bindKeys'
+
+-- mode detction {
+if mode.default then
+    require 'modes.default'
+end
+if mode.ide then
+      require 'modes.ide'
+end
+if mode.tranquil then
+      require 'modes.tranquil'
+end
+if mode.doom then
+		require 'modes.doom'
+end

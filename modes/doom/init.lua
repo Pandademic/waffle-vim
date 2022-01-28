@@ -32,7 +32,7 @@ function installPlugins()
              'nvim-telescope/telescope.nvim',
                 requires = { {'nvim-lua/plenary.nvim'} }
         }
-                    
+        use { "nvim-telescope/telescope-file-browser.nvim" }
           config = {
         -- Move to lua dir so impatient.nvim can cache it
         compile_path = vim.fn.stdpath('config')..'/lua/packer_compiled.lua'
@@ -62,8 +62,9 @@ function configure()
 
         dashboard.section.buttons.val = {
                 dashboard.button("n", "  New file", ":ene <BAR> startinsert <CR>"),
-                dashboard.button("t", "  Find text", ":Telescope live_grep <CR>"),
+                dashboard.button("f", "  Find text", ":Telescope live_grep <CR>"),
                 dashboard.button("m", "  Bookmarks", ":Telescope marks <CR>"),
+                dashboard.button("e","📁 File Explorer",":Telescope file_browser")
                 dashboard.button("r", "  Recently used files", ":Telescope oldfiles <CR>"),
                 dashboard.button("q", "  Quit Neovim", ":q!<CR>"),
         }

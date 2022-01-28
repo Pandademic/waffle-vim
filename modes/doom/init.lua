@@ -86,6 +86,10 @@ function setupVim()
         set lazyredraw
         set synmaxcol=180
         ]]
+     --keymapping
+     vim.cmd[[
+        nnoremap <C-f> :Telescope file_browser<CR>    
+    ]]
  end
 function init()
     installPlugins()

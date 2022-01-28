@@ -14,16 +14,7 @@ if modes.doom == true then
 end
 -- }
 require 'waffle.core.loadVimOptions'
--- basic vim stuff {
-vim.opt.encoding='utf-8'
-vim.opt.mouse='a'
-vim.cmd[[
-set wildignore+=*/node_modules/*
-]]
---}
 
--- keymapping {
-vim.cmd([[
-imap <dl> <esc> ddi
-]])
--- }
+require 'waffle.core.vimStuff'
+
+require 'waffle.core.bindKeys'

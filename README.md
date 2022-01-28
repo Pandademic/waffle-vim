@@ -13,9 +13,7 @@
                                                                                                     
 ------------------->
 # WAFFLE VIM
-A vim distro that's better than waffles and syrup!
-
-Trying to follow KISS principles.
+The vim distro(bution) that's better than waffles and syrup!
 
 May not be for begginers
 

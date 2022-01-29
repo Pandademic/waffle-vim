@@ -7,8 +7,8 @@ require 'waffle.core.vimStuff'
 require 'waffle.core.bindKeys'
 
 -- mode detction {
-if mode.default then
-    require 'modes.default'
+if mode.minimal then
+    require 'modes.minimal'
 end
 if mode.ide then
       require 'modes.ide'

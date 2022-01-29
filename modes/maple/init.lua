@@ -55,7 +55,7 @@ function configure()
 	        strings = "NONE",
 	        variables = "NONE",
         },
-
+	)
 end
 function init()
     installPlugins()

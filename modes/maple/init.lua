@@ -21,9 +21,13 @@ function installPlugins()
         
          use 'lewis6991/impatient.nvim'
          
-         use 'rcarriga/nvim-notify'
+         use 'mhinz/vim-startify'
          
          use 'nvim-lua/plenary.nvim'
+                        
+          use 'kyazdani42/nvim-web-devicons'
+                        
+          use 'ervandew/supertab'
           config = {
         -- Move to lua dir so impatient.nvim can cache it
         compile_path = vim.fn.stdpath('config')..'/lua/packer_compiled.lua'
@@ -32,8 +36,7 @@ function installPlugins()
         
 end
 function configure()
- vim.notify = require("notify")
- vim.notify("loaded in default(minimal) mode", "info")
+
 end
 function init()
     installPlugins()

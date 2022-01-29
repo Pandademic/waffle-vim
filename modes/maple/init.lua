@@ -42,7 +42,8 @@ end
 function configure()
      --keymapping
      vim.cmd[[
-        nnoremap <leader>-f :Fern . -drawer<CR>    
+        nnoremap <leader>-e :Fern . -drawer<CR>
+        nnoremap <leader>-f :Telescope live_grep
     ]]
 end
 function init()

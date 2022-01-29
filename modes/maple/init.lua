@@ -28,6 +28,10 @@ function installPlugins()
           use 'kyazdani42/nvim-web-devicons'
                         
           use 'ervandew/supertab'
+          
+          use 'nvim-telescope/telescope.nvim'
+                        
+          use 'lambdalisue/fern.vim/'
           config = {
         -- Move to lua dir so impatient.nvim can cache it
         compile_path = vim.fn.stdpath('config')..'/lua/packer_compiled.lua'
@@ -36,7 +40,10 @@ function installPlugins()
         
 end
 function configure()
-
+     --keymapping
+     vim.cmd[[
+        nnoremap <leader>-f :Fern . -drawer<CR>    
+    ]]
 end
 function init()
     installPlugins()

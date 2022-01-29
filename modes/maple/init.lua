@@ -31,13 +31,31 @@ function installPlugins()
           
           use 'nvim-telescope/telescope.nvim'
                         
-          use 'lambdalisue/fern.vim/'
+          use 'lambdalisue/fern.vim'
+           
+           use({
+	        "catppuccin/nvim",
+	        as = "catppuccin"
+              })
           config = {
         -- Move to lua dir so impatient.nvim can cache it
         compile_path = vim.fn.stdpath('config')..'/lua/packer_compiled.lua'
   }
       end)
         
+end
+function configure()
+        local catppuccin = require("catppuccin")
+        catppuccin.setup(
+        term_colors = true,
+        styles = {
+	        comments = "italic",
+	        functions = "NONE",
+	        keywords = "bold",
+	        strings = "NONE",
+	        variables = "NONE",
+        },
+
 end
 function init()
     installPlugins()

@@ -39,17 +39,9 @@ function installPlugins()
       end)
         
 end
-function configure()
-     --keymapping
-     vim.cmd[[
-        nnoremap <C-e> :Fern . -drawer<CR>
-        nnoremap <C-f> :Telescope live_grep
-    ]]
-end
 function init()
     installPlugins()
     vim.cmd [[packadd packer.nvim]]
     vim.cmd [[ PackerSync ]]
-    configure()
 end
 init()

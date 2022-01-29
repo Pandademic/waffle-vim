@@ -20,7 +20,10 @@ function installPlugins()
         use 'tpope/vim-fugitive' -- git wrapping
         
          use 'lewis6991/impatient.nvim'
-                    
+         
+         use 'rcarriga/nvim-notify'
+         
+         use 'nvim-lua/plenary.nvim'
           config = {
         -- Move to lua dir so impatient.nvim can cache it
         compile_path = vim.fn.stdpath('config')..'/lua/packer_compiled.lua'
@@ -28,9 +31,14 @@ function installPlugins()
       end)
         
 end
+function configure()
+ vim.notify = require("notify")
+ vim.notify("loaded in default(minimal) mode", "info")
+end
 function init()
     installPlugins()
     vim.cmd [[packadd packer.nvim]]
     vim.cmd [[ PackerSync ]]
+    configure()
 end
 init()

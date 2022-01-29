@@ -1,5 +1,5 @@
 modes = {
-   default = false,
+   minimal = false,
    ide = false,
    tranquil = false,
    doom = true,

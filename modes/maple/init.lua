@@ -46,16 +46,7 @@ function installPlugins()
 end
 function configure()
         local catppuccin = require("catppuccin")
-        catppuccin.setup(
-        term_colors = true,
-        styles = {
-	        comments = "italic",
-	        functions = "NONE",
-	        keywords = "bold",
-	        strings = "NONE",
-	        variables = "NONE",
-        },
-	)
+	vim.cmd[[colorscheme catppuccin]]
 end
 function init()
     installPlugins()

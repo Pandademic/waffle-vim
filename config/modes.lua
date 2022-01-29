@@ -1,5 +1,5 @@
 modes = {
-   minimal = false,
+   maple = false, -- default mode
    ide = false,
    tranquil = false,
    doom = true,

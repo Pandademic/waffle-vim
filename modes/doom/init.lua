@@ -61,9 +61,9 @@ function configure()
                 }
 
         dashboard.section.buttons.val = {
-                dashboard.button("n", "  New file", ":ene <BAR> startinsert <CR>"),
+                dashboard.button("n", "  New file", ":ene <BAR> startinsert <CR>"),
                 dashboard.button("f", "  Find text", ":Telescope live_grep <CR>"),
-                dashboard.button("m", "  Bookmarks", ":Telescope marks <CR>"),
+                dashboard.button("m", "  Bookmarks", ":Telescope marks <CR>"),
                 dashboard.button("e", " File Explorer",":Telescope file_browser<CR>"),
                 dashboard.button("r", "  Recently used files", ":Telescope oldfiles <CR>"),
                 dashboard.button("q", "  Quit Neovim", ":q!<CR>"),

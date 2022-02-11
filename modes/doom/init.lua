@@ -28,6 +28,16 @@ function installPlugins()
                       require'alpha'.setup(require'alpha.themes.dashboard'.config)
                 end
         }
+			
+	use 'adelarsq/neoline.vim'
+			
+			
+	use'adelarsq/vim-emoji-icon-theme'
+			
+			
+	use 'kabbamine/yowish.vim'
+			
+			
         use {
              'nvim-telescope/telescope.nvim',
                 requires = { {'nvim-lua/plenary.nvim'} }
@@ -107,5 +117,6 @@ function init()
     vim.cmd [[ PackerSync ]]
     setupVim()
     configure()
+    vim.cmd[[colorscheme yowish]]
 end
 init()

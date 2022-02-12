@@ -7,15 +7,13 @@ require 'waffle.core.vimStuff'
 require 'waffle.core.bindKeys'
 
 -- mode detction {
-if mode.maple then
-    require 'modes.maple'
+
+if mode.plusplus then
+      require 'modes.plusplus'
 end
-if mode.ide then
-      require 'modes.ide'
-end
-if mode.tranquil then
-      require 'modes.tranquil'
+if mode.typewriter then
+      require 'modes.typewriter'
 end
 if mode.doom then
-		require 'modes.doom'
+	require 'modes.doom'
 end

@@ -1,6 +1,7 @@
 modes = {
    doom = false, -- DOOM sounds cool
-   plusPlus = true , -- nvim ++
+   plusPlus = false , -- nvim ++
+   typewriter = true , -- personal fave , best for writing
 }
 -- the value of true should be what mode you want
 return modes

@@ -1,4 +1,3 @@
-vim.cmd [[packadd packer.nvim]]
 function installPlugins()
         -- Have packer use a popup window
     require('packer').init({
@@ -38,6 +37,7 @@ function installPlugins()
         
 end
 installPlugins()
+vim.cmd [[packadd packer.nvim]]
 vim.cmd [[ PackerSync ]]
 vim.cmd[[autocmd  BufWinEnter  * :Goyo]]
 vim.cmd[[

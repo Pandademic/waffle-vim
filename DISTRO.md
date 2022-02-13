@@ -19,40 +19,16 @@ May not be for begginers
 
 # install
 ------
-### MAC / LINUX
-----
-1. clone this repo to your neovim config location (Usually ~/.config/nvim/)
-2. install packer.nvim
-3. run ` mv $HOME/.config/nvim $HOME/.config/oldnvim` to move your old config to oldnvim
-4. run `git clone https://github.com/Pandademic/waffle-vim ~/.config/nvim/lua` to clone the repo
-5. make a init.vim which says `lua require('waffle')`
-6. get  a nerd font / patched font 
-7. get started
----
-#### Windows
------
-  **IN POWERSHELL from your home**
-  YOU MUST HAVE INSTALLED "NEOVIM-nightly" FROM SCOOP (version bucket) 
-1. setup a symlink between ~/AppData/Local and ~/.config/nvim . You can use roughly follow [this guide](https://www.maketecheasier.com/create-symbolic-links-windows10/#:~:text=Once%20LSE%20is%20installed%2C%20right,As%20%2D%3E%20Symbolic%20Link.%E2%80%9D)
+Add :
+```lua
 
-2. install packer.nvim
+vim.opt.runtimepath="$HOME/.vim,$VIM/vimfiles,$VIMRUNTIME,$VIM/vimfiles/after,$HOME/.vim/after"
 
-3. move your config to oldnvim in .config <!-- not neccaacary but makes migration easier --> 
-
-4. make a init.lua where it says `require('waffle')`
-
-5. cd to C:\Users\[YOU]\scoop\apps\neovim-nightly\current where [YOU] is your username
-
-6. git clone  this this repo to  C:\Users\[YOU]\scoop\apps\neovim-nightly\current\bin\lua where [YOU] is your username as lua , like so (Example user : bobbyjones):
-```sh
-
-git clone https://github.com/Pandademic/waffle-vim.git C:\Users\bobbyjones\scoop\apps\neovim-nightly\current\bin\lua
-
+require('waffle')
 ```
-7. get a patched font / nerd font
-
-8. enjoy
----
-# GETTING STARTED
----
-go to the wiki
+to your init.lua(instead of init.vim)
+now clone this repo to the lua dir off .vim (from ~)with:
+```sh
+git clone https://github.com/Pandademic/waffle-vim.git .vim/lua 
+```
+and enjoy!

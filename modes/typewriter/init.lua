@@ -25,6 +25,9 @@ function installPlugins()
         use 'junegunn/limelight.vim'
                     
         use 'lewis6991/impatient.nvim'
+                        
+                        
+         use 'google/vim-colorscheme-primary'
         
         config = {
                 -- Move to lua dir so impatient.nvim can cache it
@@ -39,4 +42,10 @@ vim.cmd [[ PackerSync ]]
 vim.cmd[[autocmd  BufWinEnter  * :Goyo]]
 vim.cmd[[
 autocmd! User GoyoLeave x
+]]
+vim.cmd[[
+syntax enable
+set t_Co=256
+set background=light
+colorscheme primary
 ]]

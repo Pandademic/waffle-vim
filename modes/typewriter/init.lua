@@ -43,4 +43,4 @@ init()
 vim.cmd[[
 autocmd! User GoyoLeave x
 ]]
-vim.cmd[[set linespace = 8]]]
+vim.cmd[[set linespace = 8]]
